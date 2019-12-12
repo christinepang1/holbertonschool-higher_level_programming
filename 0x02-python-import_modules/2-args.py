@@ -9,4 +9,6 @@ if __name__ == "__main__":
     else:
         print("{} arguments:".format(arg_nums - 1))
     for i in range(arg_nums):
+        if i == 0:
+            continue
         print("{}: {}".format(i, sys.argv[i]))
