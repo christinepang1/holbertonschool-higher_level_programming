@@ -7,15 +7,15 @@ class Square():
 
     def __init__(self, size=0, position=(0, 0)):
         """Initialize the square"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
-    @property
+    @property  # getter
     def size(self):
         """Size of the square"""
-        return self.__size
+        return self.__size  # this is a private instance
 
-    @size.setter
+    @size.setter  # setter
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
