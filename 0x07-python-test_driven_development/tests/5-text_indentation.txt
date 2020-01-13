@@ -1,0 +1,111 @@
+The ``5-text_indentation`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``text_indentation`` from the ``5-text_indentation`` module:
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Now use it:
+
+>>> Pokemon = "Pokemon Go: the best game. Ever?"
+
+>>> text_indentation(Pokemon)
+Pokemon Go:
+<BLANKLINE>
+the best game.
+<BLANKLINE>
+Ever?
+<BLANKLINE>
+>>> text_indentation(hello)
+Traceback (most recent call last):
+...
+NameError: name 'hello' is not defined
+
+>>> text_indentation("5")
+5
+
+>>> text_indentation(5, 6, 7)
+Traceback (most recent call last):
+...
+TypeError: text_indentation() takes 1 positional argument but 3 were given
+
+>>> text_indentation(two, three)
+Traceback (most recent call last):
+...
+NameError: name 'two' is not defined
+
+>>> text_indentation(5)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(-5)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(True)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(False)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(":")
+:
+<BLANKLINE>
+>>> text_indentation("::")
+:
+<BLANKLINE>
+:
+<BLANKLINE>
+
+>>> text_indentation("?")
+?
+<BLANKLINE>
+
+>>> text_indentation("??")
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+
+>>> text_indentation(".")
+.
+<BLANKLINE>
+
+>>> text_indentation("..")
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+
+>>> a = "Pichu:"
+>>> b = "Pikachu."
+>>> c = "Raichu?"
+
+>>> text_indentation(a + b + c)
+Pichu:
+<BLANKLINE>
+Pikachu.
+<BLANKLINE>
+Raichu?
+<BLANKLINE>
+
+>>> text_indentation(a * 2)
+Pichu:
+<BLANKLINE>
+Pichu:
+<BLANKLINE>
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
