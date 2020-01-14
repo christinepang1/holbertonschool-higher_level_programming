@@ -19,7 +19,7 @@ Now use it:
 >>> matrix_divided(matrix, 5)
 [[0.2, 0.4, 0.6], [0.8, 1.0, 1.2]]
 
->>> matrix_divided(matrix, -2)
+>>> matrix_divided(matrix, -1)
 [[-1.0, -2.0, -3.0], [-4.0, -5.0, -6.0]]
 
 >>> matrix_divided(matrix, 0)
@@ -27,7 +27,7 @@ Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
 
->>> matrix_divided(matrix))
+>>> matrix_divided(matrix)
 Traceback (most recent call last):
 ...
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
@@ -55,32 +55,32 @@ Traceback (most recent call last):
 …
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
->>> matrix_divided(matrix, 1, 2, 3))
+>>> matrix_divided(matrix, 1, 2, 3)
 Traceback (most recent call last):
 …
 TypeError: matrix_divided() takes 2 positional arguments but 4 were given
 
->>> matrix_divided(matrix, (1, 2, 3)))
+>>> matrix_divided(matrix, (1, 2, 3))
 Traceback (most recent call last):
 …
 TypeError: div must be a number
 
->>> matrix_divided(matrix, {1, 2, 3}))
+>>> matrix_divided(matrix, {1, 2, 3})
 Traceback (most recent call last):
 …
 TypeError: div must be a number
 
->>> matrix_divided(matrix, [1, 2, 3]))
+>>> matrix_divided(matrix, [1, 2, 3])
 Traceback (most recent call last):
 …
 TypeError: div must be a number
 
->>> matrix_divided(matrix, matrix))
+>>> matrix_divided(matrix, matrix)
 Traceback (most recent call last):
 …
 TypeError: div must be a number
 
->>> matrix_divided(2, 5))
+>>> matrix_divided(2, 5)
 Traceback (most recent call last):
 …
 TypeError: matrix must be a matrix (list of lists) of integers/floats
