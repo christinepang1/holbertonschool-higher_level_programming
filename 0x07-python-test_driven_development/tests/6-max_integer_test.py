@@ -64,7 +64,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([56.6, 55.6, 5.5, 6.5]), 56.6)
 
     def test_near(self):
-        self.assertEqual(max_integer([89.1, 89.11, 89.111, 89.1111]), 89.1111)
+        self.assertEqual(max_integer([89.1, 89.11, 89.111, 89.11111]), 89.11111)
 
     def test_array(self):
         self.assertEqual(max_integer([[1, 3, 4], [5, 7, 8]]), [5, 7, 8])
