@@ -2,6 +2,8 @@
 """
 Divide a matrix by a number
 """
+
+
 def matrix_divided(matrix, div):
     """
     Iterate through a matrix and divide by div
