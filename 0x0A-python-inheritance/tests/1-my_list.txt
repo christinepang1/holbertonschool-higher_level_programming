@@ -1,0 +1,58 @@
+The ``1-my_list`` module
+======================
+
+Using ``MyList``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``add_integer`` from the ``1-my_list`` module:
+
+>>> MyList = __import__("1-my_list").MyList
+
+Now use it:
+
+>>> L0 = MyList()
+>>> print(L0)
+[]
+
+>>> type(L0)
+<class '1-my_list.MyList'>
+
+>>> L1 = [1, 2, 3]
+>>> print(L1)
+[1, 2, 3]
+
+>>> L3 = MyList(None)
+Traceback (most recent call last):
+...
+TypeError: 'NoneType' object is not iterable
+
+>>> L4 = MyList([34, 43, 131, -90])
+>>> L4.print_sorted()
+[-90, 34, 43, 131]
+
+>>> L4.append(125)
+>>> L4.print_sorted()
+[-90, 34, 43, 125, 131]
+
+>>> L5 = MyList([12, 23, 34], [45, 56, 67])
+Traceback (most recent call last):
+...
+TypeError: list() takes at most 1 argument (2 given)
+
+>>> L6 = MyList()
+>>> L6.append(6)
+>>> L6.append(4)
+>>> L6.append(2)
+>>> print(L6)
+[6, 4, 2]
+
+>>> issubclass(MyList, list)
+True
+
+>>> 'print_sorted' in dir(MyList)
+True
+
+>>> L6[0] = 56
+>>> print(L6)
+[56, 4, 2]
