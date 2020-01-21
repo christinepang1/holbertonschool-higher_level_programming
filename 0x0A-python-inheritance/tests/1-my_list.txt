@@ -5,7 +5,7 @@ Using ``MyList``
 -------------------
 
 This is an example text file in reStructuredText format.  First import
-``add_integer`` from the ``1-my_list`` module:
+``MyList`` from the ``1-my_list`` module:
 
 >>> MyList = __import__("1-my_list").MyList
 
