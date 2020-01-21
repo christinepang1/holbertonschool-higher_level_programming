@@ -19,3 +19,17 @@ Now use it:
 
 >>> bg.integer_validator("Age", 54)
 
+>>> bg.integer_validator("name", -90)
+Traceback (most recent call last):
+...
+ValueError: name must be greater than 0
+
+>>> bg.integer_validator("name", 24.6)
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+>>> bg.integer_validator("name", "Venasaur")
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
