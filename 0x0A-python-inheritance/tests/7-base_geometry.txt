@@ -1,0 +1,21 @@
+The ``7-base_geometry`` module
+======================
+
+Using ``BaseGeometry``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``BaseGeometry`` from the ``7-base_geometry`` module:
+
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+Now use it:
+
+>>> bg = BaseGeometry()
+>>> print(type(bg))
+<class '7-base_geometry.BaseGeometry'>
+
+>>> bg.integer_validator(45, 54)
+
+>>> bg.integer_validator("Age", 54)
+
