@@ -30,4 +30,5 @@ class Student:
         """Replaces all attributes of the Student instance"""
         keys = list(json.keys())
         for i in keys:
-            setattr(self, i, keys)
+            if i in self.__dict__.keys():
+                setattr(self, i, json[i])
