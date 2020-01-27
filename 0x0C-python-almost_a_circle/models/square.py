@@ -59,3 +59,12 @@ class Square(Rectangle):
                 self.x = args[2]
                 self.y = args[3]
                 return
+
+    def to_dictionary(self):
+        """Returns dictionary representation of a square"""
+        d = {}
+        d["id"] = self.id
+        d["size"] = self.size
+        d["x"] = self.x
+        d["y"] = self.y
+        return d
