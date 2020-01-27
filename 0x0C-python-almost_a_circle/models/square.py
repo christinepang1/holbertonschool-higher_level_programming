@@ -46,10 +46,16 @@ class Square(Rectangle):
                 return
             if len(args) == 2:
                 self.id = args[0]
-                self.width = args[1]
+                self.size = args[1]
                 return
             if len(args) == 3:
                 self.id = args[0]
-                self.width = args[1]
-                self.height = args[2]
+                self.size = args[1]
+                self.x = args[2]
+                return
+            if len(args) == 4:
+                self.id = args[0]
+                self.size = args[1]
+                self.x = args[2]
+                self.y = args[3]
                 return
