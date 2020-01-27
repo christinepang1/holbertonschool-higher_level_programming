@@ -37,3 +37,11 @@ class Base:
                 lo.append(i.to_dictionary())
         with open("{}.json".format(cls.__name__), mode="w") as f:
             f.write(Base.to_json_string(lo))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns list of JSON string representation json_string"""
+        l = []
+        if json_string is None or len(json_string) == 0:
+            return l
+        return json.loads(json_string)
