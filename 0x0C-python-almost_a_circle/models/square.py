@@ -29,7 +29,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """Assigns attributes"""
-        if len(args) == 0:
+        if kwargs is not None and len(kwargs) > 0:
             for key, value in kwargs.items():
                 if key == "id":
                     self.id = value
