@@ -27,18 +27,14 @@ class TestBase(unittest.TestCase):
         self.assertEqual(d.id, -12)
         self.assertEqual(e.id, -21.3)
         self.assertEqual(f.id, 0)
-        self.assertEqual(type(f), Base)
 
-    def test_json_string(self):
+    def test_to_json_string(self):
         """Test conversion"""
         a = Base.to_json_string([])
         b = Base.to_json_string([{'x': 2}])
-        c1 = [{'x': 2}]
-        c2 = Base.to_json_string(c1)
         self.assertEqual(a, "[]")
         self.assertEqual(b, '[{"x": 2}]')
-        self.assertEqual(Base.from_json_string(c2), c1)
-
+        self.assertEqula(type(b), str)
 
 if __name__ == '__main__':
     unittest.main()
