@@ -45,10 +45,6 @@ What you should learn from this project:
 * Write a function that multiplies 2 matrices by using the module NumPy
 
 
-### [8. CPython #3: Python Strings](./102-python.c)
-* 
-
-
 ---
 
 ## Author
