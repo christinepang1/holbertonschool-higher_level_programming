@@ -74,10 +74,6 @@ What you should learn from this project:
 ### [13. Student to disk and reload](./13-student.py)
 * Write a class Student that defines a student by: (based on 12-student.py)
 
-
-### [14. Pascal's Triangle](./14-pascal_triangle.py)
-* Technical interview preparation: 
-
 ---
 
 ## Author
