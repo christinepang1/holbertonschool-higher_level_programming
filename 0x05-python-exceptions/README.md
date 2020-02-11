@@ -47,19 +47,7 @@ What you should learn from this project:
 
 
 ### [8. Safe function](./101-safe_function.py)
-* Write a function that executes a function safely.  
-
-
-### [9. ByteCode -> Python #4](./102-magic_calculation.py)
-* Write the Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode:
-
-
-### [10. CPython #2: PyFloatObject](./103-python.c)
-* Create three C functions that print some basic info about Python lists, Python bytes an Python float objects.
-
-
-
-Python lists:
+* Write a function that executes a function safely.
 
 ---
 
