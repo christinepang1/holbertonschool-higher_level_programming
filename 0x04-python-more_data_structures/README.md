@@ -81,13 +81,6 @@ What you should learn from this project:
 * Write a function that deletes keys with a specific value in a dictionary.
 
 
-### [16. CPython #1: PyBytesObject](./103-python.c)
-* Create two C functions that print some basic info about Python lists and Python bytes objects.
-
-
-
-Python lists:
-
 ---
 
 ## Author
