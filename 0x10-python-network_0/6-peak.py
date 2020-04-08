@@ -10,16 +10,23 @@ def find_peak(list_of_integers):
 
     #  if array is size of 1 or 2
 
-    size = len(list_of_integers)
+    n = len(list_of_integers)
+    if n == 0:
+        return None
+    if n == 1:
+        return list_of_integers[0]
+    if n == 2:
+        return max(list_of_integers)
+
     start = 0
-    end = size - 1
+    end = n - 1
 
     while (start <= end):
-        mid = (end + start) // 2
-        if (mid == 0 or list_of_integers[mid - 1] <= list_of_integers[mid]) and (
-                mid == size - 1 or list_of_integers[mid] >= list_of_integers[mid + 1]):
-            return list_of_integers[mid]
-        elif mid > 0 and list_of_integers[mid - 1] > list_of_integers[mid]:
-            end = mid - 1
+        m = (end + start) // 2
+        if (m == 0 or list_of_integers[m - 1] <= list_of_integers[m]) and (
+                m == n - 1 or list_of_integers[m] >= list_of_integers[m + 1]):
+            return list_of_integers[m]
+        elif m > 0 and list_of_integers[m - 1] > list_of_integers[m]:
+            end = m - 1
         else:
-            start = mid + 1
+            start = m + 1
