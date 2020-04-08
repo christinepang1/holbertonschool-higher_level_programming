@@ -18,13 +18,13 @@ def find_peak(list_of_integers):
     return helper(list_of_integers, 0, len(list_of_integers) - 1)
 
 
-def helper(list_of_integers, start, end):
+def helper(li, start, end):
     """Updating the mid"""
     m = (end + start) // 2
-    if (m == 0 or list_of_integers[m - 1] <= list_of_integers[m]) and (m == len(
-            list_of_integers) - 1 or list_of_integers[m] >= list_of_integers[m + 1]):
-        return list_of_integers[m]
-    elif m > 0 and list_of_integers[m - 1] > list_of_integers[m]:
-        return helper(list_of_integers, 0, m)
+    if (m == 0 or li[m - 1] <= li[m]) and (m ==
+                                           len(li) - 1 or li[m] >= li[m + 1]):
+        return li[m]
+    elif m > 0 and li[m - 1] > li[m]:
+        return helper(li, 0, m)
     else:
-        return helper(list_of_integers, m + 1, end)
+        return helper(li, m + 1, end)
