@@ -1,7 +1,6 @@
 #!/usr/bin/node
 const input = process.argv;
-const inputs = input.length;
-if (inputs === 2) {
+if (input[2] === undefined) {
   console.log('No argument');
 } else {
   console.log(input[2]);
