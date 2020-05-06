@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const input = process.argv;
-if (input.length <= 3) {
+if (input.length < 4) {
   console.log(0);
 } else {
   const array = input.slice(2);
